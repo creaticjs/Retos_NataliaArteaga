@@ -1,0 +1,115 @@
+body {
+    font-size: 100%;
+    background-image: url('img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+@font-face{
+    font-family: letraharry;
+    src: url(HARRYP__.ttf);
+}
+
+h1{
+    font-family: letraharry;
+    color: black;
+    font-size: 3em;
+}
+
+h3{
+    font-family: letraharry;
+    color: black;
+    font-size: 3em;
+}
+
+h4{
+    font-family: letraharry;
+    color: black;
+    font-size: 2.5em;
+}
+
+.nav-item.nav-link.active{
+    padding-bottom: 0%;
+    padding-right: 1%;     
+    border-style: none;
+    border-bottom: 1px solid black;
+    font-family: letraharry;
+    font-size: 2.3em;
+    color: black;
+    background-color:transparent; 
+}
+.nav-item.nav-link{
+    padding-bottom: 0%;
+    padding-right: 1%;   
+    border-style: none;
+    font-family: letraharry;
+    font-size: 2.3em;
+    color: black;
+    background-color:transparent; 
+}
+.cursor{ 
+    cursor: pointer
+}
+
+.table{   
+    color: black;
+    font-family: letraharry;
+    font-size: 2em;
+}
+
+.table.table-dark{
+    color: white;
+}
+
+.tbody{
+    text-align: center;
+}
+
+.list-group-item{
+    border-style: none;
+    font-family: letraharry;
+    font-size: 2em;
+    background-color:transparent; 
+    cursor: pointer;
+}
+
+.modal-content{
+    background-color:transparent; 
+}
+
+
+
+ select {   
+    font-family: letraharry;
+    font-size: 2.5em;    
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    color: black;
+    background:#e7b25c;
+    background-image: "img/fondo.jpg";
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: block;
+    width: 20em;
+    height: 4em;
+    line-height: 3;
+    background:#e7b25c;
+    overflow: hidden;
+    border-radius: .25em;
+  }
+  select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    color: #000;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HARRY POTTER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <LINK REL=StyleSheet HREF="styles.css" TYPE="text/css" MEDIA=screen>
+</head>
+
+<body>
+
+   
+    <a href="/index.html" style='display:scroll;position:fixed;bottom:70%;right:80%;'><img src="/img/reto1.png" width="40%"></a>
+    <a href="/retoDos/index.html" style='display:scroll;position:fixed;bottom:55%;right:80%;'><img src="/img/reto2.png" width="40%"></a>
+    <a href="/retoTres/index.html" style='display:scroll;position:fixed;bottom:40%;right:80%;'><img src="/img/reto3.png" width="40%"></a>
+    <a href="/retoCuatro/index.html" style='display:scroll;position:fixed;bottom:25%;right:80%;'><img src="/img/reto4.png" width="40%"></a>
+  <div id="app" class="container">
+    <br>
+    <center>
+      <h1>Hogwarts</h1>
+      <nav>
+        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+          
+          <a onclick="sombreroSeleccionador()" class="nav-item nav-link  active" data-toggle="tab" href="#nav-0"
+            role="tab" aria-controls="nav-0" aria-selected="true">Sorting Hat</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-1"
+            aria-selected="false">Houses</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-3"
+            aria-selected="false">Groups</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-4"
+            aria-selected="false">Species</a>
+          <a onclick="verAnimagos()" class="nav-item nav-link" data-toggle="tab" href="#nav-5" role="tab"
+            aria-controls="nav-5" aria-selected="false">Animagus</a>
+          <a onclick="verProfesores()" class="nav-item nav-link" data-toggle="tab" href="#nav-6" role="tab"
+            aria-controls="nav-6" aria-selected="false">Professors</a>
+          <a @click="verHechizos" class="nav-item nav-link" data-toggle="tab" href="#nav-2" role="tab"
+            aria-controls="nav-2" aria-selected="false">Spells</a>
+          <a onclick="verPersonajes()" class="nav-item nav-link" data-toggle="tab" href="#nav-7" role="tab"
+            aria-controls="nav-7" aria-selected="false">Characters</a>
+        </div>
+      </nav>
+
+
+      <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div id="contenidomodal" class="modal-content">
+            <table class="table table-dark">
+              <thead>
+              </thead>
+              <tbody id="tabla2">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-0" role="tabpanel" aria-labelledby="nav-0-tab">
+          <br>
+          <div id="sucasa"></div>
+          <br><br>
+          <div id="imagencasa"></div>
+          <br>
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-8">
+              <table class="table table-borderless">
+                <thead>
+                </thead>
+                <tbody id="tabla0">
+                </tbody>
+              </table>
+            </div>
+            <div class="col-1"></div>
+          </div>
+          <center>
+            <div id="botoncasas"></div>
+            <br><br>
+          </center>
+          <ul class="list-group" id="miembros">
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
+          <br>
+          <div class="row">
+            <div class="col-3">
+              <a name="Slytherin" id="5a05dc8cd45bd0a11bd5e071" onclick="verCasa(this)"><img class="cursor"
+                  src="img/Slytherin.png" alt="Imagen no encontrada"></a>
+            </div>
+            <div class="col-3">
+              <a name="Gryffindor" id="5a05e2b252f721a3cf2ea33f" onclick="verCasa(this)"><img class="cursor"
+                  src="img/Gryffindor.png" alt="Imagen no encontrada"></a>
+            </div>
+            <div class="col-3">
+              <a name="Ravenclaw" id="5a05da69d45bd0a11bd5e06f" onclick="verCasa(this)"><img class="cursor"
+                  src="img/Ravenclaw.png" alt="Imagen no encontrada"></a>
+            </div>
+            <div class="col-3">
+              <a name="Hufflepuff" id="5a05dc58d45bd0a11bd5e070" onclick="verCasa(this)"><img class="cursor"
+                  src="img/Hufflepuff.png" alt="Imagen no encontrada"></a>
+            </div>
+          </div>
+          <br>
+          <div id="sucasa1"></div>
+          <br>
+          <div id="nombrecasa1"></div>
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-8">
+              <table class="table table-borderless">
+                <thead>
+                </thead>
+                <tbody id="tabla1">
+                </tbody>
+              </table>
+            </div>
+            <div class="col-1"></div>
+          </div>
+          <center>
+            <div id="botoncasa1"></div>
+            <br>
+          </center>
+          <ul class="list-group" id="miembros1">
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
+          <br>
+          <center>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-xl">See
+              Favorites</button>
+            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
+              aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <table class="table table-dark">
+                    <thead>
+                      <td>NAME</td>
+                      <td>TYPE</td>
+                      <td>EFFECT</td>
+                    </thead>
+                    <tbody id="tabla4">
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </center>
+          <br>
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+              <table class="table table-borderless">
+                <thead>
+                  <td>NAME</td>
+                  <td>TYPE</td>
+                  <td>EFFECT</td>
+                  <td>ACTION</td>
+                </thead>
+                <tbody id="tabla3">
+                  <tr v-for="hechizo in hechizos">
+                    <td>{{hechizo.spell}}</td>
+                    <td>{{hechizo.type}}</td>
+                    <td>{{hechizo.effect}}</td>
+                    <td><img class="cursor" onclick="agregarHechizo(this)" :id='hechizo._id' :spell='hechizo.spell'
+                        :type='hechizo.type' :effect='hechizo.effect' src="./img/estrellavacia.png">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-1"></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
+          <br>
+          <div class="row">
+            <div class="col-3">
+              <a name="deathEater" onclick="verGrupo(this)"><img class="cursor" src="img/death.png" width="50%"
+                  alt="Imagen no encontrada">
+                <h4>Death Eater</h4>
+              </a>
+
+            </div>
+            <div class="col-3">
+              <a name="dumbledoresArmy" onclick="verGrupo(this)"><img class="cursor" src="img/da.png" width="50%"
+                  alt="Imagen no encontrada">
+                <h4>Dumbledore's Army</h4>
+              </a>
+            </div>
+            <div class="col-3">
+              <a name="ministryOfMagic" onclick="verGrupo(this)"><img class="cursor" src="img/mm.png" width="50%"
+                  alt="Imagen no encontrada">
+                <h4>Ministry of Magic</h4>
+              </a>
+            </div>
+            <div class="col-3">
+              <a name="orderOfThePhoenix" onclick="verGrupo(this)"><img class="cursor" src="img/of.png" width="50%"
+                  alt="Imagen no encontrada">
+                <h4>Order of Phoenix</h4>
+              </a>
+            </div>
+          </div>
+          <div id="nombreGrupo"></div>
+          <ul class="list-group" id="verGruposs"> <br>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-4-tab">
+          <br>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4">
+              <br>
+              <h1>Select Specie</h1>
+            </div>
+
+            <div class="col-4">
+              <br>
+              <div class="select">
+                <select name="especies" id="especies" onchange="verSpecie(this.value)">
+                  <option value="" selected>Select</option>
+                  <option value="human">Human</option>
+                  <option value="part-goblin">Part Goblin</option>
+                  <option value="ghost">Ghost</option>
+                  <option value="part-human">Part Human</option>
+                  <option value="acromantula">Acromantula</option>
+                  <option value="hippogriff">Hippogriff</option>
+                  <option value="cat">Cat</option>
+                  <option value="house-elf">House Elf</option>
+                  <option value="giant">Giant</option>
+                  <option value="portrait">Portrait</option>
+                  <option value="phoenix">Phoenix</option>
+                  <option value="goblin">Goblin</option>
+                  <option value="werewolf">Werewolf</option>
+                </select></div>
+            </div>
+          </div>
+
+          <div id="nombreEspecie"></div>
+          <ul class="list-group" id="verEspecies"> <br>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-5" role="tabpanel" aria-labelledby="nav-5-tab">
+          <br>
+          <h1>Animagus</h1> <br>
+          <ul class="list-group" id="animagos"> <br>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-6" role="tabpanel" aria-labelledby="nav-6-tab">
+          <br>
+          <h1>Professors</h1> <br>
+          <ul class="list-group" id="profesores"> <br>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-7" role="tabpanel" aria-labelledby="nav-7-tab">
+          <br>
+          <h1>Personajes</h1><br>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <form>
+                <input id="buscar" class="form-control" type="text" onkeyup="buscarPersonaje(this.value)"
+                  placeholder="Search character by name">
+              </form>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <ul class="list-group cursor" id="personajes">
+          </ul>
+        </div>
+
+      </div>
+    </center>
+
+  </div>
+
+  <script src="hogwarts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script>
+    let app = new Vue({
+      el: '#app',
+      data: {
+        hechizos: [],
+        hechizosFav: [],
+        mostrar: false,
+      },
+      methods: {
+        // Intento fallido de pasar a Vue.js
+        //agregarHechizo: function (event) {
+        // id: event.target.dataset.id,
+        // spell: event.target.dataset.spell,
+        // type: event.target.dataset.type,
+        // effect: event.target.dataset.effect,
+        // img: event.target.currentSrc  
+
+        // if (obj.img == "http://127.0.0.1:5500/img/estrellavacia.png") {
+        //  this.hechizosFav.push(obj)
+        //   console.log($("obj.id").data("id"))
+        //  obj.img="http://127.0.0.1:5500/img/estrellallena.png"
+        // $('#' + obj.id).attr("src", "./img/estrellallena.png")
+        // } else if (obj.id == "http://127.0.0.1:5500/img/estrellallena.png") {
+        // $('#' + obj.id).attr("src", "./img/estrellavacia.png")
+        // hechizosFav.map(
+        // function (spell) {
+        //  i++
+        //   if (spell.id == obj.id) {
+        //    hechizosFav.splice(i, 1);
+        //   }
+        //        }
+        //      )
+        // }     
+        //},
+
+        verHechizos: function () {
+
+          self = this
+          fetch(
+              "https://www.potterapi.com/v1/spells/?key=$2a$10$mQeGDXK.NkD1H6Mm6USoU.eNDkLoRJc5Ev9NzIcgqqvSW4xQS9Zgi"
+            )
+            .then(res => res.json()).then(datah => {
+
+              self.hechizos = datah
+              self.mostrar = true
+            })
+
+        }
+      }
+    })
+  </script>
+
+</body>
+
+</html>

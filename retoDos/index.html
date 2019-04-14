@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>RETO 2</title>
+</head>
+
+<body>
+    
+    <a href="/index.html" style='display:scroll;position:fixed;bottom:70%;right:80%;'><img src="/img/reto1.png" width="40%"></a>
+    <a href="/retoDos/index.html" style='display:scroll;position:fixed;bottom:55%;right:80%;'><img src="/img/reto2.png" width="40%"></a>
+    <a href="/retoTres/index.html" style='display:scroll;position:fixed;bottom:40%;right:80%;'><img src="/img/reto3.png" width="40%"></a>
+    <a href="/retoCuatro/index.html" style='display:scroll;position:fixed;bottom:25%;right:80%;'><img src="/img/reto4.png" width="40%"></a>
+    
+    <div class="row">
+        <div class="col-2 align-self-center">
+
+        </div>
+        <div class="col-8">
+            <br>
+            <center>
+                <h1>EJERCICIOS</h1>
+            </center> <br>
+            <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-2-tab" data-toggle="pill" href="#pills-1" role="tab"
+                        aria-controls="pills-1" aria-selected="true">1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab"
+                        aria-controls="pills-2" aria-selected="false">2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab"
+                        aria-controls="pills-3" aria-selected="false">3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab"
+                        aria-controls="pills-4" aria-selected="false">4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-5" role="tab"
+                        aria-controls="pills-5" aria-selected="false">5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-6-tab" data-toggle="pill" href="#pills-6" role="tab"
+                        aria-controls="pills-6" aria-selected="false">6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-7-tab" data-toggle="pill" href="#pills-7" role="tab"
+                        aria-controls="pills-7" aria-selected="false">7</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-8-tab" data-toggle="pill" href="#pills-8" role="tab"
+                        aria-controls="pills-8" aria-selected="false">8</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-9-tab" data-toggle="pill" href="#pills-9" role="tab"
+                        aria-controls="pills-9" aria-selected="false">9</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-10-tab" data-toggle="pill" href="#pills-10" role="tab"
+                        aria-controls="pills-10" aria-selected="false">10</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-11-tab" data-toggle="pill" href="#pills-11" role="tab"
+                        aria-controls="pills-11" aria-selected="false">11</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-12-tab" data-toggle="pill" href="#pills-12" role="tab"
+                        aria-controls="pills-12" aria-selected="false">12</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-13-tab" data-toggle="pill" href="#pills-13" role="tab"
+                        aria-controls="pills-13" aria-selected="false">13</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-14-tab" data-toggle="pill" href="#pills-14" role="tab"
+                        aria-controls="pills-14" aria-selected="false">14</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-15-tab" data-toggle="pill" href="#pills-15" role="tab"
+                        aria-controls="pills-15" aria-selected="false">15</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-16-tab" data-toggle="pill" href="#pills-16" role="tab"
+                        aria-controls="pills-16" aria-selected="false">16</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-17-tab" data-toggle="pill" href="#pills-17" role="tab"
+                        aria-controls="pills-17" aria-selected="false">17</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-18-tab" data-toggle="pill" href="#pills-18" role="tab"
+                        aria-controls="pills-18" aria-selected="false">18</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+                <!--Primer ejercicio-->
+                <div class="tab-pane fade show active " id="pills-1" role="tabpanel" aria-labelledby="pills-4-tab">
+                    <div id="ejercicio1">
+                        <center>
+                            <br>
+                            <h5>Nota</h5>
+                            <input class="form-control" name="valornota" size=30 id="valornota" type="number"
+                                placeholder="Digite la nota">
+                            <br><br>
+                            <button onclick="agregarnota()" class="btn btn-primary">Agregar Nota</button>
+                            <button onclick="promedio()" class="btn btn-primary">Calcular Promedio</button>
+                            <div id="resultado">
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col">
+                                    <table class="table" id="tabla">
+                                        <thead>
+                                            <tr>
+                                                <th>NOTA</th>
+                                                <th>PUNTUACIÓN</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="fila">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                            <div id="errorNota"></div>
+                        </center>
+                    </div>
+                </div>
+                <!--Segundo ejercicio-->
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+
+                    <div id="ejercicio2">
+
+                        <center>
+                            <br>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="co-6">
+                                    <h6>Digite la primera masa en gramos</h6><br>
+                                    <h6> Digite la segunda masa en gramos</h6><br>
+                                    <h6>Digite la distancia en centimetros</h6>
+                                </div>
+                                <div class="col-4">
+                                    <input placeholder="Masa 1 en gramos" id="masa1" type="number"><br><br>
+                                    <input placeholder="Masa 2 en gramos" id="masa2" type="number"><br><br>
+                                    <input placeholder="Distancia" id="distancia" type="number">
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <button onclick="calcularfuerza()" class="btn btn-primary">Calcular Fuerza</button>
+                            <br><br>
+                            <div id="fuerza">
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <!--Tercer ejercicio-->
+                <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+
+                    <div id="ejercicio3">
+                        <center>
+                            <br>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col-6">
+                                    <h6> Digite la masa en gramos</h6><br>
+                                    <input placeholder="Masa en gramos" id="masa" type="number"><br><br>
+                                </div>
+                                <div class="col-3">
+
+                                </div>
+                            </div>
+                            <button onclick="calcularenergia()" class="btn btn-primary"> Calcular Energia</button>
+                            <br><br>
+                            <div id="resultadoenergia">
+                            </div>
+                        </center>
+
+                    </div>
+                </div>
+                <!--Cuarto ejercicio-->
+                <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
+
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="co-6">
+                                <h6>Digite el valor del primer lado en cm</h6><br>
+                                <h6>Digite el valor del segundo lado en cm</h6><br>
+
+                            </div>
+                            <div class="col-4">
+                                <input placeholder="Primer Lado" id="lado1" type="number"><br><br>
+                                <input placeholder="Segundo Lado" id="lado2" type="number"><br>
+                                <br>
+                            </div>
+                        </div>
+                        <button onclick="calcularhipotenusa()" class="btn btn-primary"> Calcular Hipotenusa del
+                            Triangulo</button>
+                        <br><br>
+                        <div id="resultadohipotenusa">
+                        </div>
+                    </center>
+                </div>
+                <!--Quinto ejercicio-->
+                <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab">
+
+
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="co-6">
+                                <h6>Digite el valor del primer lado en cm</h6><br>
+                                <h6>Digite el valor del segundo lado en cm</h6><br>
+                                <h6>Digite el valor del tercer lado en cm</h6><br>
+                            </div>
+                            <div class="col-4">
+                                <input placeholder="Primer Lado" id="lado1t" type="number"><br><br>
+                                <input placeholder="Segundo Lado" id="lado2t" type="number"><br><br>
+                                <input placeholder="Tercer Lado" id="lado3t" type="number"> <br>
+                                <br>
+                            </div>
+                        </div>
+                        <button onclick="calcularareatriangulo()" class="btn btn-primary"> Calcular Area del Triangulo
+                        </button>
+                        <br><br>
+                        <div id="resultadoareatriangulo">
+                        </div>
+                    </center>
+                </div>
+                <!--Sexto ejercicio-->
+                <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab">
+
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <h6> Digite la hora formato 24 H</h6><br>
+                                <input placeholder="HORA 23:23" id="hora" type="text"><br><br>
+                            </div>
+                            <div class="col-3">
+
+                            </div>
+                        </div>
+                        <button onclick="calcularhora()" class="btn btn-primary"> Calcular Hora Formato 12H </button>
+                        <br><br>
+                        <div id="resultadohora">
+                        </div>
+                    </center>
+                </div>
+                <!--Septimo ejercicio-->
+                <div class="tab-pane fade" id="pills-7" role="tabpanel" aria-labelledby="pills-7-tab">
+
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <h6> Digite la fecha formato 15, Febrero 1956</h6><br>
+                                <input placeholder="15, Septiembre 1996" id="fecha" type="text"><br><br>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                        <button onclick="calcularfecha()" class="btn btn-primary"> Calcular Fecha </button>
+                        <br>
+                        <br>
+                        <div id="resultadofecha">
+                        </div>
+                    </center>
+                </div>
+                <!--Octavo ejercicio-->
+                <div class="tab-pane fade" id="pills-8" role="tabpanel" aria-labelledby="pills-8-tab">
+
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <h6> Escriba en letras un número de 3 digitos</h6><br>
+                                <input placeholder="Ej: trescientos quince" id="numero" type="text"><br><br>
+                            </div>
+                            <div class="col-3">
+
+                            </div>
+                        </div>
+                        <button onclick="calcularnumero()" class="btn btn-primary"> Calcular Numero </button>
+                        <br><br>
+                        <div id="resultadonumero">
+                        </div>
+                    </center>
+                </div>
+                <!--Noveno ejercicio-->
+                <div class="tab-pane fade" id="pills-9" role="tabpanel" aria-labelledby="pills-9-tab">
+
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <h6> Escriba el radio del circulo en centimetros</h6><br>
+                                <input placeholder="Digite el valor del radio" id="radio" type="number"><br><br>
+                            </div>
+                            <div class="col-3">
+
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Calcular
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" onclick="calculardiametro()">Diametro</a>
+                                <a class="dropdown-item" onclick="calcularcircunferencia()">Circunferencia</a>
+                                <a class="dropdown-item" onclick="calculararea()">Area</a>
+                            </div>
+                        </div>
+                        <br>
+                        <br><br>
+                        <div id="resultadoc">
+                        </div>
+                    </center>
+                </div>
+                <!--Decimo ejercicio-->
+                <div class="tab-pane fade" id="pills-10" role="tabpanel" aria-labelledby="pills-10-tab">
+
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <h6> Escriba un número arabigo de 4 digitos entre 1000 y 2000</h6><br>
+                                <input placeholder="Ej: 1345" id="numeroara" type="number"><br><br>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                        <button onclick="calcularnumeroromano()" class="btn btn-primary"> Calcular Numero Romano
+                        </button>
+                        <br><br>
+                        <div id="resultadonumeroromano">
+                        </div>
+                    </center>
+                </div>
+                <!--Decimo Primero ejercicio-->
+                <div class="tab-pane fade " id="pills-11" role="tabpanel" aria-labelledby="pills-11-tab">
+
+                    <center>
+                        <br>
+                        <h6>Digite los valores (B,C,D de un digito) para calcular la centana mas cercana</h6><br>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col"><input placeholder="A" id="puntoOneA" type="number" size=2></div>
+                            <div class="col"><input placeholder="B" id="puntoOneB" type="number" size=2></div>
+                            <div class="col"><input placeholder="C" id="puntoOneC" type="number" size=2></div>
+                            <div class="col"><input placeholder="D" id="puntoOneD" type="number" size=2></div>
+                            <br>
+
+                            <div class="col"></div>
+                        </div>
+                        <br><br>
+                        <button onclick="puntoOnce()" class="btn btn-primary">Aproximar Centena</button>
+                        <br><br>
+                        <div id="resultadoOnce"></div>
+                    </center>
+                </div>
+                <!--Decimo Segundo ejercicio-->
+                <div class="tab-pane fade " id="pills-12" role="tabpanel" aria-labelledby="pills-12-tab">
+
+                    <center>
+                        <br>
+                        <h6>Ingrese la fecha de nacimiento para calcular su edad actual </h6><br>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col"><input placeholder="Dia" id="puntoDoceDia" type="number"></div>
+                            <div class="col"><input placeholder="Mes" id="puntoDoceMes" type="number"></div>
+                            <div class="col"><input placeholder="Año" id="puntoDoceAno" type="number"></div>
+                            <div class="col"></div>
+                        </div>
+                        <br>
+                        <button onclick="puntoDoce()" class="btn btn-primary">Calcular Edad Actual</button>
+                        <br><br>
+                        <div id="resultadoDoce"></div>
+                    </center>
+                </div>
+                <!--Decimo Tercero ejercicio-->
+                <div class="tab-pane fade " id="pills-13" role="tabpanel" aria-labelledby="pills-13-tab">
+
+                    <center>
+                        <br>
+                        <h6>Digite los coeficientes de la ecuacion diferencial para encontrar los valores de X y Y</h6>
+                        <br>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <div class="row">
+
+                                    <div class="col">
+                                        A: <input placeholder="A" id="puntoTreceA" type="number" size=2><br><br>
+                                        B: <input placeholder="B" id="puntoTreceB" type="number" size=2><br><br>
+                                        C: <input placeholder="C" id="puntoTreceC" type="number" size=2><br><br>
+                                    </div>
+                                    <div class="col">
+                                        D: <input placeholder="D" id="puntoTreceD" type="number" size=2><br><br>
+                                        E: <input placeholder="E" id="puntoTreceE" type="number" size=2><br><br>
+                                        F: <input placeholder="F" id="puntoTreceF" type="number" size=2><br><br>
+                                    </div>
+                                </div>
+                                <br>
+                                <button onclick="puntoTrece()" class="btn btn-primary">Calcular Ecuación</button>
+
+
+
+                            </div>
+                            <div class="col+-2"></div>
+
+                        </div>
+                        <br><br>
+                        <div id="resultadoTrece"></div>
+                    </center>
+                </div>
+                <!--Decimo Cuarto ejercicio-->
+                <div class="tab-pane fade " id="pills-14" role="tabpanel" aria-labelledby="pills-14-tab">
+
+                    <center>
+                        <br>
+                        <h6>Digite un año para saber si es BISIESTO o no lo es</h6><br>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col"><input placeholder="Año" id="puntoCatorceAno" type="number"></div>
+                                </div>
+                                <br>
+                                <button onclick="puntoCatorse()" class="btn btn-primary">¿Es un año Bisiesto?</button>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br><br>
+                        <div id="resultadoCatorce"></div>
+                    </center>
+                </div>
+                <!--Decimo Quinto ejercicio-->
+                <div class="tab-pane fade" id="pills-15" role="tabpanel" aria-labelledby="pills-15-tab">
+
+                    <center>
+                        <br>
+                        <h6>Digite Mes y Año para conocer el numero de dias de ese Mes en dicho Año </h6><br>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col"><input placeholder="Mes" id="puntoQuinceMes" type="text" size=15>
+                                    </div>
+                                    <div class="col"><input placeholder="Año" id="puntoQuinceAno" type="text" size=15>
+                                    </div>
+                                </div>
+                                <br>
+                                <button onclick="puntoQuince()" class="btn btn-primary">Calcular Número de Días</button>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br><br>
+                        <div id="resultadoQuince"></div>
+                    </center>
+                </div>
+                <!--Decimo Sexto ejercicio-->
+                <div class="tab-pane fade" id="pills-16" role="tabpanel" aria-labelledby="pills-16-tab">
+                    <br>
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="co-6">
+                                <h6>Escriba las horas a la semana trabajadas </h6><br>
+                                <h6> Escriba la tarifa por hora </h6><br>
+                            </div>
+                            <div class="col-4">
+                                <input placeholder="Horas trabajadas" id="horastrab" type="number"><br><br>
+                                <input placeholder="Tarifa por hora" id="tarifa" type="number"><br><br>
+
+                                <br>
+                            </div>
+                        </div>
+                        <button onclick="calcularsalario()" class="btn btn-primary"> Calcular Salario</button>
+                        <br>
+                        <br><br>
+                        <div id="resultadoDieciseis">
+                        </div>
+                    </center>
+                </div>
+                <!--Decimo Septimo ejercicio-->
+                <div class="tab-pane fade" id="pills-17" role="tabpanel" aria-labelledby="pills-17-tab">
+                    <br>
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <h6>Escriba el monto de dinero a cambiar</h6><br>
+                                <input placeholder=" Dinero" id="dinero" type="number" min="50"><br><br>
+                            </div>
+                            <div class="col-3">
+                                <br>
+                            </div>
+                        </div>
+                        <button onclick="calculardinero()" class="btn btn-primary"> Calcular Cambio Optimo</button>
+                        <br><br>
+                        <div id="resultadoDiecisiete">
+                        </div>
+                    </center>
+                </div>
+                <!--Decimo Octavo ejercicio-->
+                <div class="tab-pane fade" id="pills-18" role="tabpanel" aria-labelledby="pills-18-tab">
+                    <br>
+                    <center>
+                        <br>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <h6>Escriba un número para saber si es positivo, negativo o cero </h6><br>
+                                <input placeholder="Número" id="numeropn" type="number"><br><br>
+
+                            </div>
+                            <div class="col-3">
+
+                                <br>
+                            </div>
+                        </div>
+                        <button onclick="calcularpn()" class="btn btn-primary"> Calcular</button>
+                        <br><br>
+                        <div id="resultadoDieciocho">
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <br><br>
+    <script src="./primerPunto.js"></script>
+    <script src="./segundoPunto.js"></script>
+    <script src="./tercerPunto.js"></script>
+    <script src="./cuartoPunto.js"></script>
+    <script src="./quintoPunto.js"></script>
+    <script src="./sextoPunto.js"></script>
+    <script src="./septimoPunto.js"></script>
+    <script src="./octavoPunto.js"></script>
+    <script src="./novenoPunto.js"></script>
+    <script src="./decimoPunto.js"></script>
+    <script src="./oncePunto.js"></script>
+    <script src="./docePunto.js"></script>
+    <script src="./trecePunto.js"></script>
+    <script src="./catorcePunto.js"></script>
+    <script src="./quincePunto.js"></script>
+    <script src="./dieciseisPunto.js"></script>
+    <script src="./diecisietePunto.js"></script>
+    <script src="./dieciochoPunto.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
