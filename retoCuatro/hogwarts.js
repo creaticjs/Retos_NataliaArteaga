@@ -275,7 +275,7 @@ function agregarHechizo(img) {
   if(img.src=="https://creaticjs.github.io/Retos_NataliaArteaga/retoCuatro/img/estrellavacia.png"){
     
     tabla4.innerHTML=""
-  $('#'+idSpell).attr( "src","./img/estrellallena.png")
+  $('#'+idSpell).attr( "src","https://creaticjs.github.io/Retos_NataliaArteaga/retoCuatro/img/estrellallena.png")
   hechizosFav.push({idSpell})
 }else if(img.src=="https://creaticjs.github.io/Retos_NataliaArteaga/retoCuatro/img/estrellallena.png"){
   
