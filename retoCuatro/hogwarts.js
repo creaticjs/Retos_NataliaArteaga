@@ -272,15 +272,15 @@ function agregarHechizo(img) {
   
   i=-1
    idSpell=img.id
-  if(img.src=="http://127.0.0.1:5500/retoCuatro/img/estrellavacia.png"){
+  if(img.src=="https://creaticjs.github.io/Retos_NataliaArteaga/retoCuatro/img/estrellavacia.png"){
     
     tabla4.innerHTML=""
   $('#'+idSpell).attr( "src","./img/estrellallena.png")
   hechizosFav.push({idSpell})
-}else if(img.src=="http://127.0.0.1:5500/retoCuatro/img/estrellallena.png"){
+}else if(img.src=="https://creaticjs.github.io/Retos_NataliaArteaga/retoCuatro/img/estrellallena.png"){
   
   tabla4.innerHTML=""
-  $('#'+idSpell).attr( "src","./img/estrellavacia.png")
+  $('#'+idSpell).attr( "src","https://creaticjs.github.io/Retos_NataliaArteaga/retoCuatro/img/estrellavacia.png")
   hechizosFav.map(
      function(spell){
       i++
