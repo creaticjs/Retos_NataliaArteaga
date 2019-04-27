@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Factura</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div id="app">
+    <center>
+      <h1>Factura </h1><br>
+    </center>
+    <div class="row">
+      <div class="col-1">
+        <a href="https://creaticjs.github.io/Retos_NataliaArteaga/index.html"
+          style='display:scroll;position:fixed;bottom:70%;right:80%;'><img
+            src="https://creaticjs.github.io/Retos_NataliaArteaga/img/reto1.png" width="40%"></a>
+        <a href="https://creaticjs.github.io/Retos_NataliaArteaga/retoDos/index.html"
+          style='display:scroll;position:fixed;bottom:55%;right:80%;'><img
+            src="https://creaticjs.github.io/Retos_NataliaArteaga/img/reto2.png" width="40%"></a>
+        <a href="https://creaticjs.github.io/Retos_NataliaArteaga/retoTres/index.html"
+          style='display:scroll;position:fixed;bottom:40%;right:80%;'><img
+            src="https://creaticjs.github.io/Retos_NataliaArteaga/img/reto3.png" width="40%"></a>
+        <a href="https://creaticjs.github.io/Retos_NataliaArteaga/retoCuatro/index.html"
+          style='display:scroll;position:fixed;bottom:25%;right:80%;'><img
+            src="https://creaticjs.github.io/Retos_NataliaArteaga/img/reto4.png" width="40%"></a>
+        <a href="https://creaticjs.github.io/Retos_NataliaArteaga/retoCinco/factura.html"
+          style='display:scroll;position:fixed;bottom:10%;right:80%;'><img
+            src="https://creaticjs.github.io/Retos_NataliaArteaga/img/reto5.png" width="40%"></a>
+      </div>
+      <div class="col">
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+          <form @submit.prevent="submit" action="" method="get">
+            <div class="form-group row">
+              <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre" v-model="nombre" Required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="cedula" class="col-sm-2 col-form-label">Cedula</label>
+              <div class="col-sm-10">
+                <input type="text" maxlength="10" class="form-control" name="cedula" placeholder="Cedula"
+                  v-model="cedula" Required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
+              <div class="col-sm-10">
+                <input type="text" maxlength="20" class="form-control" name="telefono" placeholder="Telefono"
+                  v-model="telefono" Required>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="nombreproducto" class="col-sm-2 col-form-label">Nombre del producto</label>
+              <div class="col-sm-10">
+                <input type="text" maxlength="15" class="form-control" name="nombreproducto"
+                  placeholder="Nombre del producto" v-model="nombreproducto" Required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="idproducto" class="col-sm-2 col-form-label">Referencia</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" name="idproducto" placeholder="Referencia del producto"
+                  v-model="idproducto" Required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="precio" class="col-sm-2 col-form-label">Precio</label>
+              <div class="col-sm-10">
+                <input type="number" min="0" class="form-control" name="precio" placeholder="Precio" v-model="precio"
+                  Required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="cantidad" class="col-sm-2 col-form-label">Cantidad</label>
+              <div class="col-sm-10">
+                <input type="number" min="1" class="form-control" name="cantidad" placeholder="cantidad"
+                  v-model="cantidad" Required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="descuento" class="col-sm-2 col-form-label">Descuento</label>
+              <div class="col-sm-10">
+                <input type="number" max="100" class="form-control" name="descuento" placeholder="Descuento %"
+                  v-model="descuento">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
+              <div class="col-sm-10">
+                <input id="datepicker" class="form-control" name="fecha" v-model="fecha" Required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="anotaciones">Anotaciones</label>
+              <textarea class="form-control" class="form-control" name="anotaciones" placeholder="Anotaciones"
+                v-model="anotaciones" rows="2"></textarea>
+            </div>
+            <center>
+              <button class="btn btn-success" type="submit">Enviar</button></center>
+          </form>
+          <br>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td> Usuario </td>
+                <td> {{ nombre }}</td>
+              </tr>
+              <tr>
+                <td>Cedula </td>
+                <td>{{cedula}}</td>
+              </tr>
+              <tr>
+                <td>Nombre del producto</td>
+                <td> {{nombreproducto}}</td>
+              </tr>
+              <tr>
+                <td>Referencia </td>
+                <td>{{idproducto}}</td>
+              </tr>
+              <tr>
+                <td>Cantidad </td>
+                <td>{{cantidad}}</td>
+              </tr>
+              <tr>
+                <td>Precio </td>
+                <td>${{precio*1}}</td>
+              </tr>
+              <tr>
+                <td>Subtotal</td>
+                <td> ${{precio*cantidad}}</td>
+              </tr>
+              <tr>
+                <td>IVA </td>
+                <td>${{precio*cantidad*0.19|redondear}}</td>
+              </tr>
+              <tr>
+                <td>Descuento </td>
+                <td>{{descuento}} %</td>
+              </tr>
+              <tr>
+                <td>Total $</td>
+                <td> {{(((precio*cantidad)+(precio*cantidad*0.19))-((precio*cantidad)*(descuento/100)))|redondear}}</p>
+              <tr>
+                <td>Anotaciones</td>
+                <td> {{anotaciones}}</td>
+              </tr>
+              <tr>
+                <td>Fecha</td>
+                <td> {{fecha|texto}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <div class="col-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <div class="table-responsive">
+
+          <table class="table table-dark table-borderless">
+            <center>
+              <thead>
+                <td>Referencia</td>
+                <td>Producto</td>
+                <td>Precio</td>
+                <td>Cantidad</td>
+                <td>Anotaciones</td>
+                <td>Subtotal</td>
+                <td>IVA</td>
+                <td>Descuento</td>
+                <td>Total</td>
+                <td>Fecha</td>
+                <td>
+                  <center>Eliminar</center>
+                </td>
+              </thead>
+              <tbody id="tablaproductos">
+                <tr v-for="producto in productos">
+                  <td>{{producto.idproducto}}</td>
+                  <td>{{producto.nombreproducto}}</td>
+                  <td>{{producto.precio}}</td>
+                  <td>{{producto.cantidad}}</td>
+                  <td>{{producto.anotaciones}}</td>
+                  <td>{{producto.subtotal}}</td>
+                  <td>{{producto.iva|redondear}}</td>
+                  <td>{{producto.descuento}}</td>
+                  <td>{{producto.total|redondear}}</td>
+                  <td>{{producto.fecha|texto}}</td>
+                  <td><a @click="eliminar(producto.idproducto, producto.total)">
+                      <center><img :total='producto.total' :id='producto.idproducto' width="32px"
+                          src="https://creaticjs.github.io/Retos_NataliaArteaga/retoCinco/eliminar.png" /></center>
+                    </a></td>
+                </tr>
+              </tbody>
+            </center>
+          </table>
+        </div>
+        <div class="alert alert-primary" role="alert">
+          <center>
+            <h5>El pago total es de {{gtotal|redondear}}<h5>
+          </center>
+        </div>
+
+      </div>
+      <div class="col-1"></div>
+    </div>
+    </template>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script type="text/javascript">
+    let app = new Vue({
+      el: '#app',
+      data: {
+        nombre: '',
+        cedula: '',
+        nombreproducto: '',
+        idproducto: '',
+        precio: '',
+        iva: '',
+        cantidad: '',
+        fecha: '',
+        subtotal: '',
+        total: '',
+        descuento: '',
+        anotaciones: '',
+        telefono: '',
+        gtotal: 0,
+        contador: 0,
+        productos: []
+      },
+      filters: {
+        redondear: function (x) {
+          return Number.parseFloat(x).toFixed(2);
+        },
+        texto: function (x) {
+          return String(x) + " "
+        }
+      },
+      methods: {
+
+        eliminar: function (id, producto) {
+          this.gtotal -= Number.parseFloat(producto).toFixed(2)
+          let index = productos.findIndex((p) => {
+            return p.idproducto == id
+          }
+          )
+          this.productos.splice(index, 1)
+        },
+
+        submit: function () {
+
+          nombre = this.nombre,
+            cedula = this.cedula,
+            telefono = this.telefono
+          nombreproducto = this.nombreproducto,
+            idproducto = this.idproducto,
+            precio = this.precio,
+            fecha = String(this.fecha),
+            descuento = this.descuento,
+            cantidad = this.cantidad,
+            subtotal = precio * cantidad,
+            iva = (0.19 * subtotal),
+            total = (((subtotal) + (iva)) - ((subtotal) * (descuento / 100)))
+          anotaciones = this.anotaciones,
+            productos = this.productos
+          this.gtotal += total
+          productos.push({
+            nombre,
+            cedula,
+            precio,
+            descuento,
+            iva,
+            telefono,
+            nombreproducto,
+            idproducto,
+            fecha,
+            cantidad,
+            subtotal,
+            total,
+            anotaciones
+          })
+
+        },
+      }
+    })
+  </script>
+  <script>
+    $('#datepicker').datepicker({
+      uiLibrary: 'bootstrap4'
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
